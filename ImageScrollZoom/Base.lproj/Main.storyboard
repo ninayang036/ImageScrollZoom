@@ -1,24 +1,173 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18121" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18092"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageScrollZoom" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" maximumZoomScale="5" translatesAutoresizingMaskIntoConstraints="NO" id="hza-4M-bw6">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Zrw-4h-638">
+                                        <rect key="frame" x="0.0" y="0.0" width="2070" height="896"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mountain" translatesAutoresizingMaskIntoConstraints="NO" id="5tb-L4-dxV">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="firstsnow" translatesAutoresizingMaskIntoConstraints="NO" id="uYP-fU-eAk">
+                                                <rect key="frame" x="414" y="0.0" width="414" height="896"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="souhailbog" translatesAutoresizingMaskIntoConstraints="NO" id="2k3-Up-qZu">
+                                                <rect key="frame" x="828" y="0.0" width="414" height="896"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Italy" translatesAutoresizingMaskIntoConstraints="NO" id="R3X-UP-M57">
+                                                <rect key="frame" x="1242" y="0.0" width="414" height="896"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Trento" translatesAutoresizingMaskIntoConstraints="NO" id="4FL-pa-8fq">
+                                                <rect key="frame" x="1656" y="0.0" width="414" height="896"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="5tb-L4-dxV" firstAttribute="height" secondItem="t4v-md-cIt" secondAttribute="height" id="4su-Om-XHB"/>
+                                    <constraint firstItem="Zrw-4h-638" firstAttribute="top" secondItem="hT9-T1-yg6" secondAttribute="top" id="91f-cr-3K2"/>
+                                    <constraint firstItem="Zrw-4h-638" firstAttribute="leading" secondItem="hT9-T1-yg6" secondAttribute="leading" id="E2j-eA-RCp"/>
+                                    <constraint firstItem="5tb-L4-dxV" firstAttribute="width" secondItem="t4v-md-cIt" secondAttribute="width" id="MXH-lq-3aw"/>
+                                    <constraint firstItem="Zrw-4h-638" firstAttribute="trailing" secondItem="hT9-T1-yg6" secondAttribute="trailing" id="vJq-ZL-h7a"/>
+                                    <constraint firstItem="Zrw-4h-638" firstAttribute="bottom" secondItem="hT9-T1-yg6" secondAttribute="bottom" id="zPj-ts-uP3"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="hT9-T1-yg6"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="t4v-md-cIt"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="GCD-S6-bvx"/>
+                                </connections>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="Fam-W8-UqX">
+                                <rect key="frame" x="128" y="794.5" width="158" height="27.5"/>
+                                <connections>
+                                    <action selector="pageChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="FrP-RT-ee8"/>
+                                </connections>
+                            </pageControl>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hza-4M-bw6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5AV-bD-sQP"/>
+                            <constraint firstItem="hza-4M-bw6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="AVQ-4P-gSN"/>
+                            <constraint firstAttribute="bottom" secondItem="hza-4M-bw6" secondAttribute="bottom" id="CY7-xF-BUQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Fam-W8-UqX" secondAttribute="bottom" constant="40" id="asz-9k-RNg"/>
+                            <constraint firstAttribute="trailing" secondItem="hza-4M-bw6" secondAttribute="trailing" id="ct1-x0-nlo"/>
+                            <constraint firstItem="Fam-W8-UqX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pO1-rr-VGH"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pagecontrol" destination="Fam-W8-UqX" id="Exv-gS-C8u"/>
+                        <outlet property="scrollview" destination="hza-4M-bw6" id="GYH-f4-T4t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="78.348214285714278"/>
+        </scene>
+        <!--Random View Controller-->
+        <scene sceneID="cre-LH-GZQ">
+            <objects>
+                <viewController id="8wX-lG-Mpc" customClass="randomViewController" customModule="ImageScrollZoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E1n-xK-JM6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" maximumZoomScale="5" translatesAutoresizingMaskIntoConstraints="NO" id="9A7-sZ-YwK">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="AZP-SK-Cec">
+                                        <rect key="frame" x="0.0" y="0.0" width="2070" height="896"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HWU-rG-ncs">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZD2-Uu-emv">
+                                                <rect key="frame" x="414" y="0.0" width="414" height="896"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0vJ-rG-Ibz">
+                                                <rect key="frame" x="828" y="0.0" width="414" height="896"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q9X-Gx-A0Y">
+                                                <rect key="frame" x="1242" y="0.0" width="414" height="896"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ed5-yu-NqA">
+                                                <rect key="frame" x="1656" y="0.0" width="414" height="896"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="AZP-SK-Cec" firstAttribute="trailing" secondItem="eqa-qC-eXU" secondAttribute="trailing" id="0Qd-KL-WIM"/>
+                                    <constraint firstItem="AZP-SK-Cec" firstAttribute="bottom" secondItem="eqa-qC-eXU" secondAttribute="bottom" id="8Hj-Dj-Qko"/>
+                                    <constraint firstItem="HWU-rG-ncs" firstAttribute="width" secondItem="E7x-tV-aQm" secondAttribute="width" id="CuO-AD-fSN"/>
+                                    <constraint firstItem="HWU-rG-ncs" firstAttribute="height" secondItem="E7x-tV-aQm" secondAttribute="height" id="PqN-zj-bUG"/>
+                                    <constraint firstItem="AZP-SK-Cec" firstAttribute="leading" secondItem="eqa-qC-eXU" secondAttribute="leading" id="XRf-Gg-ERX"/>
+                                    <constraint firstItem="AZP-SK-Cec" firstAttribute="top" secondItem="eqa-qC-eXU" secondAttribute="top" id="phU-Zi-Tmo"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="eqa-qC-eXU"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="E7x-tV-aQm"/>
+                                <connections>
+                                    <outlet property="delegate" destination="8wX-lG-Mpc" id="8c6-ZX-QLs"/>
+                                </connections>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="pvj-bi-Yst">
+                                <rect key="frame" x="128" y="794.5" width="158" height="27.5"/>
+                                <connections>
+                                    <action selector="pageChange:" destination="8wX-lG-Mpc" eventType="valueChanged" id="PcV-dR-2wh"/>
+                                </connections>
+                            </pageControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="c6c-u7-q1T"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pvj-bi-Yst" firstAttribute="centerX" secondItem="E1n-xK-JM6" secondAttribute="centerX" id="1KG-nJ-lBW"/>
+                            <constraint firstAttribute="bottom" secondItem="9A7-sZ-YwK" secondAttribute="bottom" id="6YQ-8T-CiB"/>
+                            <constraint firstItem="9A7-sZ-YwK" firstAttribute="top" secondItem="E1n-xK-JM6" secondAttribute="top" id="Ah0-OF-QY9"/>
+                            <constraint firstItem="9A7-sZ-YwK" firstAttribute="leading" secondItem="E1n-xK-JM6" secondAttribute="leading" id="I5w-Sg-XJL"/>
+                            <constraint firstItem="c6c-u7-q1T" firstAttribute="bottom" secondItem="pvj-bi-Yst" secondAttribute="bottom" constant="40" id="MjN-g1-nQa"/>
+                            <constraint firstAttribute="trailing" secondItem="9A7-sZ-YwK" secondAttribute="trailing" id="ygP-Uv-A9h"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pagecontrol" destination="pvj-bi-Yst" id="ull-Uy-9dh"/>
+                        <outlet property="scrollview" destination="9A7-sZ-YwK" id="iLz-Vu-wwG"/>
+                        <outletCollection property="imageviews" destination="HWU-rG-ncs" collectionClass="NSMutableArray" id="e3o-aL-v3n"/>
+                        <outletCollection property="imageviews" destination="ZD2-Uu-emv" collectionClass="NSMutableArray" id="bYo-uu-YD6"/>
+                        <outletCollection property="imageviews" destination="0vJ-rG-Ibz" collectionClass="NSMutableArray" id="HBh-aG-Nxg"/>
+                        <outletCollection property="imageviews" destination="Q9X-Gx-A0Y" collectionClass="NSMutableArray" id="qdD-Wk-PaP"/>
+                        <outletCollection property="imageviews" destination="ed5-yu-NqA" collectionClass="NSMutableArray" id="EVV-fd-JoZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R26-01-d9W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1081" y="78"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Italy" width="736" height="1104"/>
+        <image name="Mountain" width="736" height="1089"/>
+        <image name="Trento" width="736" height="1104"/>
+        <image name="firstsnow" width="1333" height="2074"/>
+        <image name="souhailbog" width="1280" height="1920"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

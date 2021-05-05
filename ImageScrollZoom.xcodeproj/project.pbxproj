@@ -13,6 +13,7 @@
 		ACB7705F2640ECAB006436D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACB7705D2640ECAB006436D7 /* Main.storyboard */; };
 		ACB770612640ECAF006436D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACB770602640ECAF006436D7 /* Assets.xcassets */; };
 		ACB770642640ECAF006436D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACB770622640ECAF006436D7 /* LaunchScreen.storyboard */; };
+		ACB7706E26417785006436D7 /* randomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB7706D26417785006436D7 /* randomViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		ACB770602640ECAF006436D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACB770632640ECAF006436D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACB770652640ECAF006436D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACB7706D26417785006436D7 /* randomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = randomViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				ACB770592640ECAB006436D7 /* SceneDelegate.swift */,
 				ACB7705B2640ECAB006436D7 /* ViewController.swift */,
 				ACB7705D2640ECAB006436D7 /* Main.storyboard */,
+				ACB7706D26417785006436D7 /* randomViewController.swift */,
 				ACB770602640ECAF006436D7 /* Assets.xcassets */,
 				ACB770622640ECAF006436D7 /* LaunchScreen.storyboard */,
 				ACB770652640ECAF006436D7 /* Info.plist */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACB7705C2640ECAB006436D7 /* ViewController.swift in Sources */,
+				ACB7706E26417785006436D7 /* randomViewController.swift in Sources */,
 				ACB770582640ECAB006436D7 /* AppDelegate.swift in Sources */,
 				ACB7705A2640ECAB006436D7 /* SceneDelegate.swift in Sources */,
 			);
@@ -216,7 +220,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +275,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -287,6 +291,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 57ZG885DM5;
 				INFOPLIST_FILE = ImageScrollZoom/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -305,6 +310,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 57ZG885DM5;
 				INFOPLIST_FILE = ImageScrollZoom/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
